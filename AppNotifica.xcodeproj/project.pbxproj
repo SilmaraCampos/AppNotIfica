@@ -17,6 +17,10 @@
 		E46254B92A2E103B000C9264 /* AppNotificaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46254B82A2E103B000C9264 /* AppNotificaTests.swift */; };
 		E46254C32A2E103B000C9264 /* AppNotificaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46254C22A2E103B000C9264 /* AppNotificaUITests.swift */; };
 		E46254C52A2E103B000C9264 /* AppNotificaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46254C42A2E103B000C9264 /* AppNotificaUITestsLaunchTests.swift */; };
+		E46254D42A2E1C58000C9264 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46254D32A2E1C58000C9264 /* Coordinator.swift */; };
+		E46254D62A2E1D14000C9264 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46254D52A2E1D14000C9264 /* LoginCoordinator.swift */; };
+		E46254DA2A2E2037000C9264 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46254D92A2E2037000C9264 /* LoginView.swift */; };
+		E46254DC2A2E2061000C9264 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46254DB2A2E2061000C9264 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		E46254BE2A2E103B000C9264 /* AppNotificaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppNotificaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46254C22A2E103B000C9264 /* AppNotificaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotificaUITests.swift; sourceTree = "<group>"; };
 		E46254C42A2E103B000C9264 /* AppNotificaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotificaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E46254D32A2E1C58000C9264 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E46254D52A2E1D14000C9264 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		E46254D92A2E2037000C9264 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E46254DB2A2E2061000C9264 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +109,10 @@
 		E462549D2A2E1037000C9264 /* AppNotifica */ = {
 			isa = PBXGroup;
 			children = (
-				E462549E2A2E1037000C9264 /* AppDelegate.swift */,
-				E46254A02A2E1037000C9264 /* SceneDelegate.swift */,
-				E46254A22A2E1037000C9264 /* ViewController.swift */,
-				E46254A42A2E1037000C9264 /* Main.storyboard */,
-				E46254AA2A2E103A000C9264 /* Assets.xcassets */,
-				E46254AC2A2E103A000C9264 /* LaunchScreen.storyboard */,
+				E46254D82A2E2017000C9264 /* Controller */,
+				E46254D22A2E1C30000C9264 /* Coordinator */,
+				E46254D12A2E1751000C9264 /* Resource */,
 				E46254AF2A2E103A000C9264 /* Info.plist */,
-				E46254A72A2E1037000C9264 /* AppNotifica.xcdatamodeld */,
 			);
 			path = AppNotifica;
 			sourceTree = "<group>";
@@ -128,6 +132,38 @@
 				E46254C42A2E103B000C9264 /* AppNotificaUITestsLaunchTests.swift */,
 			);
 			path = AppNotificaUITests;
+			sourceTree = "<group>";
+		};
+		E46254D12A2E1751000C9264 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E46254A72A2E1037000C9264 /* AppNotifica.xcdatamodeld */,
+				E462549E2A2E1037000C9264 /* AppDelegate.swift */,
+				E46254A02A2E1037000C9264 /* SceneDelegate.swift */,
+				E46254A22A2E1037000C9264 /* ViewController.swift */,
+				E46254A42A2E1037000C9264 /* Main.storyboard */,
+				E46254AA2A2E103A000C9264 /* Assets.xcassets */,
+				E46254AC2A2E103A000C9264 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E46254D22A2E1C30000C9264 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E46254D32A2E1C58000C9264 /* Coordinator.swift */,
+				E46254D52A2E1D14000C9264 /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E46254D82A2E2017000C9264 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E46254D92A2E2037000C9264 /* LoginView.swift */,
+				E46254DB2A2E2061000C9264 /* LoginViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46254D62A2E1D14000C9264 /* LoginCoordinator.swift in Sources */,
+				E46254DA2A2E2037000C9264 /* LoginView.swift in Sources */,
 				E46254A32A2E1037000C9264 /* ViewController.swift in Sources */,
 				E462549F2A2E1037000C9264 /* AppDelegate.swift in Sources */,
+				E46254DC2A2E2061000C9264 /* LoginViewController.swift in Sources */,
+				E46254D42A2E1C58000C9264 /* Coordinator.swift in Sources */,
 				E46254A92A2E1037000C9264 /* AppNotifica.xcdatamodeld in Sources */,
 				E46254A12A2E1037000C9264 /* SceneDelegate.swift in Sources */,
 			);
