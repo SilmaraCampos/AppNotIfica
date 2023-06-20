@@ -18,7 +18,7 @@ class RegisterView: UIView {
             setupVisualElements()
             
         }
-    //MARK: - Initialize
+    //MARK: - Closures
     var onLoginTap: (()-> Void)?
        
     //MARK: - Properties
